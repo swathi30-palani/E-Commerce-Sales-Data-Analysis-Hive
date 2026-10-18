@@ -15,7 +15,7 @@ This project analyzes e-commerce sales data using Apache Hive and Hadoop. It dem
 - Apache Hadoop
 - HDFS
 - HiveQL
-- Python (if used in the application)
+- Python 
 
 ## 🎯 Objective
 To demonstrate e-commerce sales data analysis using Apache Hive and Hadoop.
