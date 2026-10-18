@@ -1,29 +1,33 @@
-# E-Commerce Sales Analysis (Flask + Apache Hive)
+# E-Commerce Sales Data Analysis Using Hive
 
-Hive is the only database. Connection: localhost:10000, user `hive`, auth NONE, table `ecommerce.sales`.
+## 📌 Project Overview
+This project analyzes e-commerce sales data using Apache Hive and Hadoop. It demonstrates how sales records can be stored, queried, and analyzed using HiveQL.
 
-## IMPORTANT: how to open
-Do NOT open `templates/index.html` with Live Server / double-click. Those files are Jinja templates and only
-work when Flask serves them. Start the app and open **http://localhost:5000**
+## ✨ Features
+- Store e-commerce sales records
+- View sales data
+- Query sales information using HiveQL
+- Analyze sales by product, category, and region
+- Manage sales data using Hadoop and Hive
 
-## Steps
-1. Start Hadoop + HiveServer2 (port 10000).
-2. (First time only) create the table: `beeline -u jdbc:hive2://localhost:10000 -n hive -f setup_hive.sql`
-3. Windows: double-click `run.bat`  |  Linux/Mac: `./run.sh`
-   (or manually: `python -m venv venv`, activate, `pip install -r requirements.txt`, `python app.py`)
-4. Open http://localhost:5000
+## 🛠️ Technologies Used
+- Apache Hive
+- Apache Hadoop
+- HDFS
+- HiveQL
+- Python (if used in the application)
 
-## Modules
-| Page | URL | Backend function |
-|---|---|---|
-| Dashboard (totals, search) | `/` | `get_summary()` |
-| Sales Data + search | `/sales` | `get_all_sales()`, `search_sales()` |
-| Category / Region / Product / Payment analysis | `/analysis/<kind>` | `get_groups()`, `get_sales_by()` |
-| Add New Sale | `/add` | `order_exists()`, `insert_sale()` |
+## 🎯 Objective
+To demonstrate e-commerce sales data analysis using Apache Hive and Hadoop.
 
-## Files
-- `app.py` Flask routes   - `hive_db.py` all Hive queries   - `templates/` HTML pages   - `static/style.css` styling
+## ▶️ Setup
+1. Install and configure Java, Hadoop, and Apache Hive.
+2. Start the required Hadoop services.
+3. Configure Hive and create the required database and tables.
+4. Load the e-commerce sales data.
+5. Execute HiveQL queries to analyze the data.
 
-## Notes
-- Windows: do NOT install `sasl` (needs C++ build tools). This project uses pure-sasl via PyHive[hive_pure_sasl].
-- Each insert launches a Hive job (a few seconds). The app waits for the job to finish and confirms the row exists.
+## 👩‍💻 Author
+**Swathi Palani**
+
+GitHub: [swathi30-palani](https://github.com/swathi30-palani)
